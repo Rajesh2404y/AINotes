@@ -1,0 +1,170 @@
+/* ==========================================================================
+   AI Notes Summarizer - Specialized Page View Layouts
+   Dropzones, Steppers, Split-views, History Feeds
+   ========================================================================== */
+
+/* Upload Page Dropzone */
+.upload-dropzone {
+    border: 2px dashed var(--border-color);
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.upload-dropzone:hover, .upload-dropzone.drag-over {
+    border-color: var(--primary-color);
+    background-color: var(--primary-subtle);
+    transform: scale(1.005);
+}
+
+.upload-dropzone-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-full);
+    background-color: var(--primary-subtle);
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.file-preview-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+}
+
+/* Split-Pane Layout (Summary & Translation) */
+.split-pane-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .split-pane-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pane-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+}
+
+.pane-body {
+    flex: 1;
+}
+
+.pane-textarea {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-primary);
+    resize: none;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Quiz Stepper & Question Card */
+.quiz-stepper-header {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-question-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+/* History Cards */
+.history-card {
+    transition: all 0.2s ease;
+}
+
+.history-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+/* History Modal & Pagination refinements */
+#historyDetailModal .modal-body {
+    min-height: 380px;
+}
+
+#history-pagination-nav .page-link {
+    border-radius: 6px;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+    background-color: var(--bg-card);
+    transition: all 0.15s ease;
+}
+
+#history-pagination-nav .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#history-pagination-nav .page-item.disabled .page-link {
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: var(--bg-tertiary);
+}
+
+/* Profile Header */
+.profile-hero-card {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(124, 58, 237, 0.08) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+}
+
+/* Recommendation Reason & Feedback Boxes */
+.rec-reason-box {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-left: 3.5px solid var(--primary-color) !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.rec-reason-text {
+    color: var(--text-primary);
+    font-size: 0.83rem;
+    line-height: 1.5;
+}
+
+[data-bs-theme="dark"] .rec-reason-box {
+    background-color: #1a2333;
+    border-color: #27354f;
+    border-left-color: #818cf8 !important;
+}
+
+[data-bs-theme="dark"] .rec-reason-text {
+    color: #f1f5f9;
+}
+
+

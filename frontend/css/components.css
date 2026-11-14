@@ -1,0 +1,262 @@
+/* ==========================================================================
+   AI Notes Summarizer - Modular Reusable Component Styles
+   Avatars, Empty States, Skeletons, Option Pills, Modals
+   ========================================================================== */
+
+/* User Avatars */
+.user-avatar-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.user-avatar-md {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.user-avatar-lg {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+/* Empty States */
+.empty-state {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.empty-state-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-full);
+    background-color: var(--primary-subtle);
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+/* Subtle Badges */
+.badge-subtle {
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radius-full);
+}
+
+/* Option Cards for Quizzes and Selectors - Accessible Design */
+.option-card {
+    border: 1.5px solid var(--border-color);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 1.15rem 1.35rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    outline: none;
+}
+
+.option-card:hover {
+    border-color: #818cf8;
+    background-color: var(--primary-subtle);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.option-card:focus-visible {
+    outline: 2px solid #818cf8;
+    outline-offset: 2px;
+    border-color: #6366f1;
+}
+
+.option-card.selected {
+    border-color: #6366f1;
+    background-color: rgba(99, 102, 241, 0.12);
+    box-shadow: 0 0 0 2px #6366f1;
+}
+
+.option-indicator {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 1.5px solid var(--border-color);
+    background-color: var(--bg-main);
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.option-card:hover .option-indicator {
+    border-color: #818cf8;
+    color: #4f46e5;
+}
+
+.option-card.selected .option-indicator,
+.option-indicator.selected {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(79, 70, 229, 0.35);
+}
+
+.option-text {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--text-primary);
+    transition: color 0.15s ease;
+}
+
+.option-card.selected .option-text {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Dark Mode Accessible Overrides for Quiz Options */
+[data-bs-theme="dark"] .quiz-question-card {
+    background: #162032;
+    border-color: #27354f;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+[data-bs-theme="dark"] .option-card {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+[data-bs-theme="dark"] .option-card:hover {
+    background-color: #27354f;
+    border-color: #818cf8;
+}
+
+[data-bs-theme="dark"] .option-card.selected {
+    background-color: rgba(99, 102, 241, 0.25);
+    border-color: #818cf8;
+    box-shadow: 0 0 0 2px #6366f1;
+}
+
+[data-bs-theme="dark"] .option-card .option-text {
+    color: #f1f5f9;
+}
+
+[data-bs-theme="dark"] .option-card.selected .option-text {
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .option-indicator {
+    background-color: #253348;
+    border-color: #3e4f68;
+    color: #e2e8f0;
+}
+
+[data-bs-theme="dark"] .option-card:hover .option-indicator {
+    border-color: #818cf8;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .option-card.selected .option-indicator,
+[data-bs-theme="dark"] .option-indicator.selected {
+    background-color: #6366f1;
+    border-color: #818cf8;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .quiz-input-card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+[data-bs-theme="dark"] .quiz-text-input {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+[data-bs-theme="dark"] .quiz-text-input:focus {
+    background-color: #0f172a;
+    border-color: #818cf8;
+    color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* Interactive Pill Radio Groups */
+.btn-group-pill .btn {
+    border-radius: var(--radius-full);
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.88rem;
+}
+
+/* Skeleton Loading Animation */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, var(--border-color) 25%, var(--border-subtle) 50%, var(--border-color) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--radius-sm);
+}
+
+.skeleton-text {
+    height: 14px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.skeleton-title {
+    height: 22px;
+    width: 60%;
+    margin-bottom: 14px;
+}
+
+/* Modal refinements */
+.modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+

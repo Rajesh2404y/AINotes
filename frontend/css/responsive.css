@@ -1,0 +1,89 @@
+/* ==========================================================================
+   AI Notes Summarizer - Responsive Breakpoints (responsive.css)
+   Mobile Drawer, Tablet Grids, and Small Device Rules
+   ========================================================================== */
+
+/* Tablet & Mobile Screens (<992px) */
+@media (max-width: 991.98px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .topbar {
+        padding: 0 1.25rem;
+    }
+
+    .page-body {
+        padding: 1.25rem;
+    }
+
+    .navbar-collapse {
+        background-color: var(--bg-card, #ffffff);
+        padding: 1.25rem;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+        margin-top: 0.75rem;
+        border: 1px solid var(--border-color);
+    }
+
+    .hero-title {
+        font-size: 2.35rem;
+    }
+
+    .split-pane-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Devices (<576px) */
+@media (max-width: 575.98px) {
+    .page-body {
+        padding: 1rem;
+    }
+
+    .topbar {
+        height: 60px;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .metric-value {
+        font-size: 1.5rem;
+    }
+
+    .auth-card {
+        padding: 1.5rem 1.25rem;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+    }
+
+    .auth-wrapper {
+        padding: 0.5rem;
+    }
+
+    .chart-wrapper {
+        height: 220px;
+    }
+
+    .btn-group-pill {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-group-pill .btn {
+        border-radius: var(--radius-sm) !important;
+        margin-bottom: 0.25rem;
+    }
+}

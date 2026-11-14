@@ -1,0 +1,96 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+backend/.pytest_tmp/
+lighthouse_*.json
+check_lh.py
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+instance/
+
+# Flask uploads & cache
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/instance/
+
+# Application Logs
+backend/logs/*
+!backend/logs/.gitkeep
+
+# AI Model Cache (if stored locally)
+model_cache/
+backend/app/ai/models_cache/
+*.bin
+*.safetensors
+*.pt
+*.onnx
+
+# Test and Generated PDFs
+*.pdf
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
