@@ -6,10 +6,7 @@ scanned/image page detection for OCR routing, and encrypted document detection.
 
 import logging
 from typing import Dict, Any, List
-try:
-    import pymupdf as fitz  # Modern PyMuPDF API
-except ImportError:
-    import fitz  # Fallback for legacy environments
+import pymupdf as fitz
 
 logger = logging.getLogger("ainotes.pdf_extractor")
 

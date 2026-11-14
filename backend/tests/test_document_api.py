@@ -10,10 +10,7 @@ Verifies:
 """
 
 import io
-try:
-    import pymupdf as fitz
-except ImportError:
-    import fitz
+import pymupdf as fitz
 import pytest
 from flask_jwt_extended import create_access_token
 from backend.app.extensions import db

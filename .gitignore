@@ -89,7 +89,8 @@ backend/app/ai/models_cache/
 
 # Editors and IDEs
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
 *.sublime-project
 *.sublime-workspace
 .DS_Store

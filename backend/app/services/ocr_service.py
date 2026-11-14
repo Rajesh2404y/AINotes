@@ -11,7 +11,7 @@ import logging
 from typing import Dict, Any, List, Optional, Tuple
 from PIL import Image, ImageEnhance, ImageFilter
 import pytesseract
-import fitz  # PyMuPDF
+import pymupdf as fitz
 
 logger = logging.getLogger("ainotes.ocr_service")
 

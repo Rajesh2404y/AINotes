@@ -11,10 +11,7 @@ Verifies:
 - TXT binary content rejection.
 """
 
-try:
-    import pymupdf as fitz
-except ImportError:
-    import fitz
+import pymupdf as fitz
 from docx import Document as DocxDoc
 from PIL import Image
 
