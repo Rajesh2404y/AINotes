@@ -129,6 +129,13 @@ const apiClient = {
     },
 
     /**
+     * Checks API and database connectivity.
+     */
+    async checkHealth() {
+        return this.get("/health");
+    },
+
+    /**
      * POST Request shorthand.
      */
     async post(endpoint, data = {}, customHeaders = {}) {
